@@ -1,0 +1,15 @@
+@active-color: red;
+header {
+  text-align: center;
+  .item {
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
+    &:hover {
+      color: lighten(@active-color, 30%);
+    }
+  }
+  .active {
+    color: @active-color;
+  }
+}
