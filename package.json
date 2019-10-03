@@ -3,9 +3,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dll-utils": "cross-env NODE_ENV=production webpack --config webpack.dll.utils.js",
-    "dll-react": "cross-env NODE_ENV=production webpack --config webpack.dll.react.js",
-    "dll": "npm run dll-utils && npm run dll-react",
+    "dll": "cross-env NODE_ENV=production webpack --config webpack.dll.js",
     "start": "npm run dll && cross-env NODE_ENV=development && node dev-server",
     "build": "rm -rf ./dist && npm run dll && cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
